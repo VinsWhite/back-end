@@ -1,6 +1,7 @@
 <?php 
 
     include_once('partials/header.php');
+    require_once 'config/config.php';
 
     session_start();
 
@@ -13,12 +14,17 @@
 
     //Creo la tabella per inserire un post
     $sql = 'CREATE TABLE IF NOT EXISTS posts (
-        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        id_post INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
         title VARCHAR(255) NOT NULL,
         descrip TEXT NOT NULL,
+        user_id INT NOT NULL, /* vincolo - foreign key */
     )';
 
-    //DA CONTINUARE... bisogna inserire il post nel database
+    $sql = "ALTER TABLE posts
+        ADD COSTRAINT userID_postID
+        FOREIGN KEY (user_id)
+        REFERENCES contacts (id)
+        ON DELETE RESTRICT ON UPDATE RESTRICT";
 ?>
 
 <main>
