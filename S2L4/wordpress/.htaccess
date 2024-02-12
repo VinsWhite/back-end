@@ -1,0 +1,29 @@
+
+
+# BEGIN WordPress
+# Le direttive (linee) tra "BEGIN WordPress" e "END WordPress" sono
+# generate dinamicamente, e dovrebbero essere modificate solo tramite i filtri di WordPress.
+# Ogni modifica alle direttive tra questi marcatori verrà sovrascritta.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /back-end/S2L4/polyglothub/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /back-end/S2L4/polyglothub/index.php [L]
+</IfModule>
+
+# END WordPress
+
+# Begin AIOWPSEC Firewall
+	<IfModule mod_php5.c>
+		php_value auto_prepend_file 'C:/xampp/htdocs/back-end/S2L4/wordpress/aios-bootstrap.php'
+	</IfModule>
+	<IfModule mod_php7.c>
+		php_value auto_prepend_file 'C:/xampp/htdocs/back-end/S2L4/wordpress/aios-bootstrap.php'
+	</IfModule>
+	<IfModule mod_php.c>
+		php_value auto_prepend_file 'C:/xampp/htdocs/back-end/S2L4/wordpress/aios-bootstrap.php'
+	</IfModule>
+# End AIOWPSEC Firewall
