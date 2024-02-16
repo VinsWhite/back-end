@@ -1,0 +1,40 @@
+# Translation of Plugins - WP Map Block &#8211; Gutenberg Map Block for Google Map and OpenStreet Map - Stable (latest release) in Italian
+# This file is distributed under the same license as the Plugins - WP Map Block &#8211; Gutenberg Map Block for Google Map and OpenStreet Map - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-04 09:30:08+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-beta.2\n"
+"Language: it\n"
+"Project-Id-Version: Plugins - WP Map Block &#8211; Gutenberg Map Block for Google Map and OpenStreet Map - Stable (latest release)\n"
+
+#: includes/Admin.php:25
+msgid "Enjoying WP Map Block? We have more to offer."
+msgstr "Ti piace WP Map Block? Abbiamo altro da offrirti."
+
+#: includes/Admin.php:26
+msgid "We've recently launched <strong>Academy LMS Pro</strong>, the LMS plugin to create, manage, and sell online courses. Launch your own eLearning business today to get a <strong>40% discount</strong> on Academy LMS Pro. <a href=\"https://academylms.net/go/alms-deal-from-wpmapblock\" target=\"_blank\">Grab the deal</a> with a <strong>Coupon: WPMAPBLOCK</strong> before it expires!"
+msgstr "Abbiamo recentemente rilasciato <strong>Academy LMS Pro</strong>, il plugin LMS per creare, gestire e vendere corsi online. Crea oggi la tua attività di eLearning e ottieni uno <strong>sconto del 40%</strong> su Academy LMS Pro. <a href=\"https://academylms.net/go/alms-deal-from-wpmapblock\" target=\"_blank\">Approfitta dell'offerta</a> con il <strong>buono sconto: WPMAPBLOCK</strong> prima che scada!"
+
+#. Plugin URI of the plugin
+msgid "https://academylms.net/wp-map-block"
+msgstr "https://academylms.net/wp-map-block"
+
+#. Author of the plugin
+msgid "Academy LMS"
+msgstr "Academy LMS"
+
+#. Author URI of the plugin
+msgid "https://academylms.net/"
+msgstr "https://academylms.net/"
+
+#. Description of the plugin
+msgid "Gutenberg Map Block for Google Map and OpenStreet Map build with LeafletJS"
+msgstr "Blocco mappa di Gutenberg per Google Map e OpenStreet Map realizzato con LeafletJS"
+
+#. Plugin Name of the plugin
+msgid "WP Map Block"
+msgstr "WP Map Block"
