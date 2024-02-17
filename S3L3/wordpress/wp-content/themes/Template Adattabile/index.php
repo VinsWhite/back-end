@@ -23,7 +23,7 @@
         <div class="container my-4">
             <section class="text-center mt-4 mb-3 py-3" style="background-color: #f2f2f2;">
                 <h3 class="text-secondary text-uppercase"><?php echo get_theme_mod('h3_text', 'Lorem ipsum'); ?></h3>
-                <p>Test</p>
+                <p class="text-dark"><?php echo get_theme_mod('paragraph_text', 'Add a paragraph here'); ?></p>
             </section>
         </div>
     

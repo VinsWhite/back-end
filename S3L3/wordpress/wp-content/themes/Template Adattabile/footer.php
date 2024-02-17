@@ -1,10 +1,4 @@
-<!-- PHP operations -->
-<?php
-    $year = date("Y");
-?>
 
-
-    
     <footer class="border-top text-center py-4 bg-dark text-light">
         <p><?php echo get_theme_mod('footer_text', '&copy; Copyright ' . date("Y") . 'TEMPLATE ADATTABILE'); ?></p>
     </footer>

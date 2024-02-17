@@ -101,11 +101,35 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_Menu {
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
+    
 }
+
+//------------------------------------------------------------------------
+//Background color
+function myTheme_customize_register($wp_customize){   
+    $wp_customize->add_section('colors', array(       
+        'title' => __('Background Color', 'myTheme'),
+        'priority' => 30
+    ));
+
+    $wp_customize->add_setting('bg_color', array(      
+        'default' => '#ffffff',
+        'transport' => 'postMessage',                     
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control ($wp_customize, 'bg_color', array(
+        'label' => __('Background Color', 'myTheme'),
+        'section' => 'colors',
+        'settings' => 'bg_color',                        
+    ))); 
+}
+add_action('customize_register', 'myTheme_customize_register');
+
 
 
 //--------------------------------------------------------------------------
 // Middle Section
+//H3
 function my_theme_customize_h3($wp_customize) {
     $wp_customize->add_section('h3_title', array(
         'title' => __('H3', 'my_theme'),
@@ -125,6 +149,28 @@ function my_theme_customize_h3($wp_customize) {
 }
 
 add_action('customize_register', 'my_theme_customize_h3');
+
+//Paragraph
+function my_theme_customize_p($wp_customize) {
+    $wp_customize->add_section('paragraph_title', array(
+        'title' => __('Paragraph', 'my_theme'),
+        'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('paragraph_text', array(
+        'default'=> 'Add a paragraph here',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('paragraph_text', array(
+        'label' => __('Paragraph Text', 'my_theme'),
+        'section' => 'paragraph_title',
+        'type' => 'text',
+    ));
+}
+
+add_action('customize_register', 'my_theme_customize_p');
+
 
 //--------------------------------------------------------------------------
 
