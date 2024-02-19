@@ -1,0 +1,5 @@
+# Ignora la cartella wordpress
+/S3L4/wordpress/*
+
+# Pubblica solo la cartella JS - WPApi
+!S3L4/JS - WPApi/*

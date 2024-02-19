@@ -1,0 +1,21 @@
+/* CUSTOM CSS */
+
+/* LOGIN PAGE 
+Icona cestino */
+.posts i {
+    display: block;
+    width: 1em; 
+}
+
+.posts .fa-trash-alt {
+    color: rgb(245, 53, 53);
+}
+
+.posts .fa-trash-alt:hover {
+    color: rgb(214, 96, 96);
+}
+
+/* Icon modifica */
+.posts .fa-pen:hover {
+    color: grey;
+}
