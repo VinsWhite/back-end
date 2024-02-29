@@ -1,0 +1,7 @@
+.bg-almostLight {
+    background-color: rgb(251, 253, 253);
+}
+
+.selected-language {
+    border: 2px solid grey;
+}
