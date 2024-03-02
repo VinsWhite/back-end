@@ -2,15 +2,26 @@
 
     include_once ('partials/header.php');
     // includiamo ed utilizziamo le classi
-    include ('namespace.php');
-    use Space\ButtonGenerator as BG;
-    use Space\FormInputGenerator as FG;
+    include ('namespaceFixed.php');
+    use FormGenerator\DivGenerator as FDG; // form div generator
+    use FormGenerator\LabelGenerator as FLG; // form label generator
+    use FormGenerator\InputGenerator as FIG; // form input generator
+    use FormGenerator\ButtonGenerator as FBG; //form button generator
 
-    $emailGenerator = new FG('email', 'form-control', 'exampleInputEmail1', 'Inserisci email...', 'email');
-    $nameGenerator = new FG('text', 'form-control', 'exampleInputName1', 'Inserisci il tuo nome...', 'nam');
-    $lastnameGenerator = new FG('text', 'form-control', 'exampleInputLastName1', 'Inserisci il tuo cognome...', 'lastname');
-    $passwordGenerator = new FG('password', 'form-control', 'examplePassword1', 'Insersci password...', 'passW');
-    $buttonGenerator = new BG('submit', 'btn btn-secondary', 'submitButton');
+    $divGenerator = new FDG('mb-3 mt-4');
+    $labelEmailGenerator = new FLG('form-label', 'Indirizzo Email');
+    $inputEmailGenerator = new FIG('email','form-control','email');
+
+    $labelNameGenerator = new FLG('form-label', 'Nome');
+    $inputNameGenerator = new FIG('text','form-control','nam');
+
+    $labelLastnameGenerator = new FLG('form-label', 'Cognome');
+    $inputLastnameGenerator = new FIG('text','form-control','lastname');
+
+    $labelPasswordGenerator = new FLG('form-label', 'Password');
+    $inputPasswordGenerator = new FIG('password','form-control','passW');
+
+    $buttonGenerator = new FBG('submit', 'btn btn-secondary', 'Invio');
 ?>
 
     <!-- Lo so, il form è bruttissimo, ma ho fatto di corsa --> 
@@ -18,19 +29,27 @@
         <h1 class="text-warning-emphasis">Form di registrazione!</h1>
         <p class="text-black-50">Inserisci le tue informazioni qui sotto</p>
         <form action="controller.php" method="post">
-            <div class="mb-3 mt-4">
-                <?php echo $emailGenerator->inputEmailField(); ?>
-            </div>
-            <div class="mb-3 mt-4">
-                <?php echo $nameGenerator->inputNameField(); ?>
-            </div>
-            <div class="mb-3 mt-4">
-                <?php echo $lastnameGenerator->inputLastnameField(); ?>
-            </div>
-            <div class="mb-3 mt-4">
-                <?php echo $passwordGenerator->inputPasswordField(); ?>
-            </div>
-            <?php echo $buttonGenerator->buttonField(); ?>
+            <?php echo $divGenerator->startDiv(); ?>
+                <?php echo $labelEmailGenerator->getLabel(); ?>
+                <?php echo $inputEmailGenerator->getInput(); ?>
+            <?php echo $divGenerator->endDiv(); ?>
+            
+            <?php echo $divGenerator->startDiv(); ?>
+                <?php echo $labelNameGenerator->getLabel(); ?>
+                <?php echo $inputNameGenerator->getInput(); ?>
+            <?php echo $divGenerator->endDiv(); ?>
+
+            <?php echo $divGenerator->startDiv(); ?>
+                <?php echo $labelLastnameGenerator->getLabel(); ?>
+                <?php echo $inputLastnameGenerator->getInput(); ?>
+            <?php echo $divGenerator->endDiv(); ?>
+
+            <?php echo $divGenerator->startDiv(); ?>
+                <?php echo $labelPasswordGenerator->getLabel(); ?>
+                <?php echo $inputPasswordGenerator->getInput(); ?>
+            <?php echo $divGenerator->endDiv(); ?>
+
+            <?php echo $buttonGenerator->getButton(); ?>
         </form>
     </main>
 
