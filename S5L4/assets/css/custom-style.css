@@ -1,0 +1,25 @@
+.bg-danger {
+    background-color: #644643 !important;
+}
+
+.bg-lightbrown {
+    background-color: #a48380 !important;
+}
+
+h1, h2, h3, h4, h5, p, table, nav {
+    user-select: none;
+}
+
+td:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hoverTD {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.hoverTD:hover {
+    background-color: #806361 !important;
+}
