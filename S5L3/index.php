@@ -1,4 +1,6 @@
 <?php 
+    session_start();
+    session_destroy();
 
     include_once ('partials/header.php');
     // includiamo ed utilizziamo le classi
@@ -28,7 +30,7 @@
     <main class="container mt-5">
         <h1 class="text-warning-emphasis">Form di registrazione!</h1>
         <p class="text-black-50">Inserisci le tue informazioni qui sotto</p>
-        <form action="controller.php" method="post">
+        <form action="newsPage.php" method="post">
             <?php echo $divGenerator->startDiv(); ?>
                 <?php echo $labelEmailGenerator->getLabel(); ?>
                 <?php echo $inputEmailGenerator->getInput(); ?>

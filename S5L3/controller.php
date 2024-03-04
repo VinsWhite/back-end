@@ -28,10 +28,4 @@
     
     if(!$mysqli->query($sql)) { die($mysqli->connect_error); }
 
-
-    if (isset($_POST['email']) && isset($_POST['nam']) && isset($_POST['lastname']) && isset($_POST['passW'])) {
-        var_dump($_POST);
-    } else {
-        echo 'nessun dato inserito';
-    }
 ?>
