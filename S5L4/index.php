@@ -1,5 +1,14 @@
 <?php
     require_once 'assets/classes/libreria.php';
+    require_once 'assets/database/database.php';
+    $config = require_once('assets/database/config.php');
+
+    use Database\DB_PDO as DB;
+
+     // Il metodo getInstance della classe Singleton ritorna una istanza
+    // se è già presente altrimenti la crea e la ritorna
+    $PDOConn = DB::getInstance($config); 
+    $conn = $PDOConn->getConnection();
 
     use Libreria\Libro;
     use Libreria\DVD;
